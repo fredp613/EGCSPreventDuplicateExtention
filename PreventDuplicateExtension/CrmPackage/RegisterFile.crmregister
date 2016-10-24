@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="PreventDuplicateExtension.Plugins.dll" Id="268ed6f1-049a-e611-93fe-06a5b6453db2" IsolationMode="Sandbox" SourceType="Database">
+      <PluginTypes>
+        <Plugin Description="Plug-in to PostPreventDuplicateFieldCreate" FriendlyName="PostPreventDuplicateFieldCreate" Name="PreventDuplicateExtension.Plugins.PostPreventDuplicateFieldCreate" Id="298ed6f1-049a-e611-93fe-06a5b6453db2" TypeName="PreventDuplicateExtension.Plugins.PostPreventDuplicateFieldCreate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostPreventDuplicateFieldCreate" Description="Post-Operation of Prevent Duplicate Field Create" Id="2a8ed6f1-049a-e611-93fe-06a5b6453db2" MessageName="Create" Mode="Synchronous" PrimaryEntityName="fp_preventduplicatefield" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="fp_fieldnames,fp_name" EntityAlias="names" Id="2d8ed6f1-049a-e611-93fe-06a5b6453db2" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostPreventDuplicateFieldUpdate" FriendlyName="PostPreventDuplicateFieldUpdate" Name="PreventDuplicateExtension.Plugins.PostPreventDuplicateFieldUpdate" Id="2e8ed6f1-049a-e611-93fe-06a5b6453db2" TypeName="PreventDuplicateExtension.Plugins.PostPreventDuplicateFieldUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostPreventDuplicateFieldUpdate" Description="Post-Operation of Prevent Duplicate Field Update" Id="2f8ed6f1-049a-e611-93fe-06a5b6453db2" MessageName="Update" Mode="Synchronous" PrimaryEntityName="fp_preventduplicatefield" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="fp_fieldnames,fp_name" EntityAlias="names" Id="328ed6f1-049a-e611-93fe-06a5b6453db2" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PrePreventDuplicateFieldDelete" FriendlyName="PrePreventDuplicateFieldDelete" Name="PreventDuplicateExtension.Plugins.PrePreventDuplicateFieldDelete" Id="338ed6f1-049a-e611-93fe-06a5b6453db2" TypeName="PreventDuplicateExtension.Plugins.PrePreventDuplicateFieldDelete">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PrePreventDuplicateFieldDelete" Description="Pre-Operation of Prevent Duplicate Field Delete" Id="348ed6f1-049a-e611-93fe-06a5b6453db2" MessageName="Delete" Mode="Synchronous" PrimaryEntityName="fp_preventduplicatefield" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="fp_fieldnames,fp_name" EntityAlias="names" Id="378ed6f1-049a-e611-93fe-06a5b6453db2" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+      </PluginTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>
